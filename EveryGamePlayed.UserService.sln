@@ -12,9 +12,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Executables", "_Executable
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Test", "_Test", "{3E40206A-0AF9-4590-8F57-2A70705EF8A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "src\API\API.csproj", "{BA7B4EA3-0D8D-4996-B952-2E0B0AD190A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "src\API\API.csproj", "{BA7B4EA3-0D8D-4996-B952-2E0B0AD190A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "src\Models\Models.csproj", "{5AE74AA5-1F50-424F-B279-0E5A87BD8229}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "src\Models\Models.csproj", "{5AE74AA5-1F50-424F-B279-0E5A87BD8229}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreServices", "src\CoreServices\CoreServices.csproj", "{83A8319F-0103-468C-A6EF-FA462AD2F80F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +32,10 @@ Global
 		{5AE74AA5-1F50-424F-B279-0E5A87BD8229}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AE74AA5-1F50-424F-B279-0E5A87BD8229}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AE74AA5-1F50-424F-B279-0E5A87BD8229}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83A8319F-0103-468C-A6EF-FA462AD2F80F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83A8319F-0103-468C-A6EF-FA462AD2F80F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83A8319F-0103-468C-A6EF-FA462AD2F80F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83A8319F-0103-468C-A6EF-FA462AD2F80F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

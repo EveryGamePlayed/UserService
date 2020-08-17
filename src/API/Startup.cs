@@ -16,6 +16,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Models;
+using Models.Entities;
 
 namespace API
 {
@@ -35,7 +36,18 @@ namespace API
                 c.UseSqlServer(Configuration.GetConnectionString("UserDbConnection"),
                     b => b.MigrationsAssembly("Models")));
             
-            services.AddIdentity<IdentityUser, IdentityRole>();
+            services.AddIdentity<User, IdentityRole>(options =>
+                {
+                    options.Password.RequireDigit = true;
+                    options.Password.RequireLowercase = true;
+                    options.Password.RequireUppercase = true;
+                    options.Password.RequiredLength = 20;
+                    options.Lockout.MaxFailedAccessAttempts = 5;
+                    options.Lockout.DefaultLockoutTimeSpan = new TimeSpan(0,0,5, 0);
+                    options.User.RequireUniqueEmail = true;
+                })
+                .AddEntityFrameworkStores<UserDbContext>()
+                .AddDefaultTokenProviders();
 
             services.AddCors();
 
